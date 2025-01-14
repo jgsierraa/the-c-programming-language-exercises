@@ -1,0 +1,21 @@
+# include <stdio.h>
+
+int main(){
+	char string[6]="hello";
+	
+
+	// get the size of the array
+	//
+	int size = sizeof(string)/sizeof(string[0]);
+	// now iterate through the string so i can reverse the string
+	// but how do i do it tho, if i create an array with size 6 how can  i 
+	// define the values of it
+	char stringReversed[size];
+	for(int i = 0; i < size; i++){
+		stringReversed[size-i-1] = string[i];
+		printf("%s\n", stringReversed);
+	}
+	printf("%s %i, reversed = %s", string, size, stringReversed);
+	return 0;
+}
+
